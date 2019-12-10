@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:feedback"
+             x:Class="feedback.MainPage">
+
+    <StackLayout>
+        <StackLayout Margin="10,10,10,10">
+            <Label Text="Ваш отзыв важен для нас!"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+
+            <Label Text="ФИО" HorizontalOptions="Center"/>
+            <Editor x:Name="name"
+                Placeholder="Введите ваши данные"/>
+
+
+            <Label Text="Email" HorizontalOptions="Center"/>
+            <Editor x:Name="email" Placeholder="Введите вашу почту"/>
+
+            <Label Text="Ваш отзыв" HorizontalOptions="Center"/>
+            <Editor x:Name="opinion" Placeholder="Ваш отзыв"
+                    HeightRequest="100"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Добавить"
+                    Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                    Text="Отменить"
+                    Clicked="OnCancelButtonClicked"/>
+            </Grid>
+
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
